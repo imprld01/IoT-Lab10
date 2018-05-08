@@ -25,7 +25,7 @@ def lowpass(x, dt=1, RC=1):
 
 def instLowpass(x, pasty, dt=1, RC=1):
    
-    alpha = dt / (RC + dt)
+    alpha = 0.5#dt / (RC + dt)
     y = alpha * x + (1 - alpha) * pasty
         
     return y
