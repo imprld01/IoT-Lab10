@@ -34,6 +34,7 @@ accel = Adafruit_ADXL345.ADXL345()
 
 first = True
 past = 0.0
+newone = 0.0
 
 raw = np.array([])
 filtered = np.array([])
