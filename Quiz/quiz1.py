@@ -88,7 +88,7 @@ while True:
 
     gyrox = getSignedNumber(X)
     gyroy = getSignedNumber(Y)
-    gyroy = getSignedNumber(Z)
+    gyroz = getSignedNumber(Z)
     
     # Magnetometer
     #==================================================================
