@@ -61,14 +61,14 @@ init_imu()
 #==================================================================
 
 while True:
-	# Accelerometer
-	#==================================================================
-	accx, accy, accz = accel.read()
-	
-	# Gyroscope
-	#==================================================================
-	
-	i2c_bus.write_byte(i2c_address,0x28)
+    # Accelerometer
+    #==================================================================
+    accx, accy, accz = accel.read()
+    
+    # Gyroscope
+    #==================================================================
+    
+    i2c_bus.write_byte(i2c_address,0x28)
     X_L = i2c_bus.read_byte(i2c_address)
     i2c_bus.write_byte(i2c_address,0x29)
     X_H = i2c_bus.read_byte(i2c_address)
@@ -92,19 +92,19 @@ while True:
     
     # Magnetometer
     #==================================================================
-	
+    
     magx = read_word_2c(addrHMC, 3)
-	magy = read_word_2c(addrHMC, 7)
-	magz = read_word_2c(addrHMC, 5)
-	
-	# Altitude
-	#==================================================================
-	
-	sensor = BMP085.BMP085()
-	
-	alti = sensor.read_altitude()
-	
-	#==================================================================
-	
+    magy = read_word_2c(addrHMC, 7)
+    magz = read_word_2c(addrHMC, 5)
+    
+    # Altitude
+    #==================================================================
+    
+    sensor = BMP085.BMP085()
+    
+    alti = sensor.read_altitude()
+    
+    #==================================================================
+    
     print('ACC: x:{0},y:{1},z:{2}; GYRO: x:{3},y:{4},z:{5}; MAG: x:{6},y:{7},z:{8}; Alti: {9:0.2f}m'.format(accx, accy, accz, gyrox, gyroy, gyroz, magx, magy, magz, alti))
     time.sleep(0.5)
