@@ -46,7 +46,7 @@ while True:
     else: past = accx
     
     raw = np.append(raw, accx)
-    filtered = np.append(filtered, accx)
+    filtered = np.append(filtered, newone)
     
     print('raw-x:{0}'.format(raw))
     print('filtered:{0}'.format(filtered))
