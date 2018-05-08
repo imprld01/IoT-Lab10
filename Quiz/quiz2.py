@@ -44,6 +44,7 @@ while True:
     if not first: newone = instLowpass(accx, past)
     else:
         past = accx
+        newone = accx
         first = False
     
     raw = np.append(raw, accx)
