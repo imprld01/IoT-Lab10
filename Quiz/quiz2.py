@@ -41,10 +41,10 @@ filtered = np.array([])
 
 while True:
     accx, _, _ = accel.read()
-    if not first:
-        newone = instLowpass(accx, past)
+    if not first: newone = instLowpass(accx, past)
+    else:
+        past = accx
         first = False
-    else: past = accx
     
     raw = np.append(raw, accx)
     filtered = np.append(filtered, newone)
