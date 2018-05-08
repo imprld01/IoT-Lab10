@@ -106,5 +106,5 @@ while True:
     
     #==================================================================
     
-    print('ACC: x:{0},y:{1},z:{2}; GYRO: x:{3},y:{4},z:{5}; MAG: x:{6},y:{7},z:{8}; Alti: {9:0.2f}m'.format(accx/256, accy/256, accz/256, (gyrox*8.75)/1000, (gyroy*8.75)/1000, (gyroz*8.75)/1000, magx*0.92, magy*0.92, magz*0.92, alti))
+    print('ACC: x:{0},y:{1},z:{2}; GYRO: x:{3},y:{4},z:{5}; MAG: x:{6},y:{7},z:{8}; Alti: {9:0.2f}m'.format(accx/256.0, accy/256.0, accz/256.0, (gyrox*8.75)/1000.0, (gyroy*8.75)/1000.0, (gyroz*8.75)/1000.0, magx*0.92, magy*0.92, magz*0.92, alti))
     time.sleep(0.5)
